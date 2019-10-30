@@ -5,6 +5,7 @@
  */
 package congklak;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -17,6 +18,8 @@ import java.util.Random;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.Timer;
 import javax.swing.JOptionPane;
 
@@ -79,10 +82,16 @@ public class Congklak extends javax.swing.JFrame {
         away1 = new javax.swing.JButton();
         homeScore = new javax.swing.JLabel();
         awayScore = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         buttonSuit = new javax.swing.JButton();
-        textPlayer = new javax.swing.JLabel();
-        buttonRestart = new javax.swing.JButton();
         nextPlayer = new javax.swing.JButton();
+        buttonRestart = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        textPlayer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -90,6 +99,7 @@ public class Congklak extends javax.swing.JFrame {
                 formWindowOpened(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setText("5");
         home1.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +107,7 @@ public class Congklak extends javax.swing.JFrame {
                 home1ActionPerformed(evt);
             }
         });
+        getContentPane().add(home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 74, -1));
 
         home2.setText("5");
         home2.addActionListener(new java.awt.event.ActionListener() {
@@ -104,6 +115,7 @@ public class Congklak extends javax.swing.JFrame {
                 home2ActionPerformed(evt);
             }
         });
+        getContentPane().add(home2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 74, -1));
 
         home3.setText("5");
         home3.addActionListener(new java.awt.event.ActionListener() {
@@ -111,6 +123,7 @@ public class Congklak extends javax.swing.JFrame {
                 home3ActionPerformed(evt);
             }
         });
+        getContentPane().add(home3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 74, -1));
 
         home4.setText("5");
         home4.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +131,7 @@ public class Congklak extends javax.swing.JFrame {
                 home4ActionPerformed(evt);
             }
         });
+        getContentPane().add(home4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 74, -1));
 
         home5.setText("5");
         home5.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +139,7 @@ public class Congklak extends javax.swing.JFrame {
                 home5ActionPerformed(evt);
             }
         });
+        getContentPane().add(home5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 74, -1));
 
         away3.setText("5");
         away3.addActionListener(new java.awt.event.ActionListener() {
@@ -132,6 +147,7 @@ public class Congklak extends javax.swing.JFrame {
                 away3ActionPerformed(evt);
             }
         });
+        getContentPane().add(away3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 74, -1));
 
         away4.setText("5");
         away4.addActionListener(new java.awt.event.ActionListener() {
@@ -139,6 +155,7 @@ public class Congklak extends javax.swing.JFrame {
                 away4ActionPerformed(evt);
             }
         });
+        getContentPane().add(away4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 74, -1));
 
         away5.setText("5");
         away5.addActionListener(new java.awt.event.ActionListener() {
@@ -146,6 +163,7 @@ public class Congklak extends javax.swing.JFrame {
                 away5ActionPerformed(evt);
             }
         });
+        getContentPane().add(away5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 74, -1));
 
         away2.setText("5");
         away2.addActionListener(new java.awt.event.ActionListener() {
@@ -153,6 +171,7 @@ public class Congklak extends javax.swing.JFrame {
                 away2ActionPerformed(evt);
             }
         });
+        getContentPane().add(away2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 74, -1));
 
         away1.setText("5");
         away1.addActionListener(new java.awt.event.ActionListener() {
@@ -160,24 +179,24 @@ public class Congklak extends javax.swing.JFrame {
                 away1ActionPerformed(evt);
             }
         });
+        getContentPane().add(away1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 74, -1));
 
         homeScore.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         homeScore.setText("0");
+        getContentPane().add(homeScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 120, -1, -1));
 
         awayScore.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         awayScore.setText("0");
+        getContentPane().add(awayScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, -1, -1));
 
         buttonSuit.setText("Suit");
         buttonSuit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonSuitActionPerformed(evt);
-            }
-        });
-
-        buttonRestart.setText("Restart");
-        buttonRestart.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonRestartActionPerformed(evt);
             }
         });
 
@@ -188,80 +207,42 @@ public class Congklak extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        buttonRestart.setText("Restart");
+        buttonRestart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRestartActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 60, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(away1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(away2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(away3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(away4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(away5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(home1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(home2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(home3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(home4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(home5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 59, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(awayScore)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(homeScore))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(buttonSuit, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(textPlayer)
-                        .addGap(134, 134, 134)
-                        .addComponent(nextPlayer)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(buttonRestart, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(buttonSuit, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                .addComponent(nextPlayer)
+                .addGap(29, 29, 29)
+                .addComponent(buttonRestart, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(away1)
-                    .addComponent(away2)
-                    .addComponent(away3)
-                    .addComponent(away4)
-                    .addComponent(away5))
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(homeScore)
-                    .addComponent(awayScore))
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(home1)
-                    .addComponent(home2)
-                    .addComponent(home3)
-                    .addComponent(home4)
-                    .addComponent(home5))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonSuit)
-                    .addComponent(textPlayer)
-                    .addComponent(buttonRestart)
-                    .addComponent(nextPlayer))
-                .addContainerGap())
+                    .addComponent(nextPlayer)
+                    .addComponent(buttonRestart))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 442, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("/home/panjiad/Downloads/Rectangle 7 (1).png")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 330));
+        getContentPane().add(textPlayer, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1577,6 +1558,33 @@ public class Congklak extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
+        try {
+            ImageIcon icon,icon2,icon3;
+            icon=new ImageIcon("src/kecil1.png");
+            icon2=new ImageIcon("src/kecil2.png");
+            icon3=new ImageIcon("src/btn.png");
+//            Image img = ImageIO.read(getClass().getResource("C:\\Users\\ADHE\\Desktop\\kecil.jpeg"));
+            away1.setIcon(icon);
+            away2.setIcon(icon);
+            away3.setIcon(icon);
+            away4.setIcon(icon);
+            away5.setIcon(icon);
+            home1.setIcon(icon);
+            home2.setIcon(icon);
+            home3.setIcon(icon);
+            home4.setIcon(icon);
+            home5.setIcon(icon);
+            homeScore.setIcon(icon2);
+            awayScore.setIcon(icon2);
+            buttonSuit.setIcon(icon3);
+            buttonRestart.setIcon(icon3);
+            nextPlayer.setIcon(icon3);
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        
+        textPlayer.setForeground(Color.black);
+        
         away1.setEnabled(false);
         away2.setEnabled(false);
         away3.setEnabled(false);
@@ -1587,6 +1595,71 @@ public class Congklak extends javax.swing.JFrame {
         home3.setEnabled(false);
         home4.setEnabled(false);
         home5.setEnabled(false);
+        
+        away1.setContentAreaFilled(false);
+        away2.setContentAreaFilled(false);
+        away3.setContentAreaFilled(false);
+        away4.setContentAreaFilled(false);
+        away5.setContentAreaFilled(false);
+        home1.setContentAreaFilled(false);
+        home2.setContentAreaFilled(false);
+        home3.setContentAreaFilled(false);
+        home4.setContentAreaFilled(false);
+        home5.setContentAreaFilled(false);
+        buttonSuit.setContentAreaFilled(false);
+        buttonRestart.setContentAreaFilled(false);
+        nextPlayer.setContentAreaFilled(false);
+        jPanel1.setOpaque(false);
+        
+        home1.setHorizontalTextPosition(JButton.CENTER);
+        home1.setVerticalTextPosition(JButton.CENTER);
+        home1.setForeground(Color.white);
+        home2.setHorizontalTextPosition(JButton.CENTER);
+        home2.setVerticalTextPosition(JButton.CENTER);
+        home2.setForeground(Color.white);
+        home3.setHorizontalTextPosition(JButton.CENTER);
+        home3.setVerticalTextPosition(JButton.CENTER);
+        home3.setForeground(Color.white);
+        home4.setHorizontalTextPosition(JButton.CENTER);
+        home4.setVerticalTextPosition(JButton.CENTER);
+        home4.setForeground(Color.white);
+        home5.setHorizontalTextPosition(JButton.CENTER);
+        home5.setVerticalTextPosition(JButton.CENTER);
+        home5.setForeground(Color.white);
+        
+        away1.setHorizontalTextPosition(JButton.CENTER);
+        away1.setVerticalTextPosition(JButton.CENTER);
+        away1.setForeground(Color.white);
+        away2.setHorizontalTextPosition(JButton.CENTER);
+        away2.setVerticalTextPosition(JButton.CENTER);
+        away2.setForeground(Color.white);
+        away3.setHorizontalTextPosition(JButton.CENTER);
+        away3.setVerticalTextPosition(JButton.CENTER);
+        away3.setForeground(Color.white);
+        away4.setHorizontalTextPosition(JButton.CENTER);
+        away4.setVerticalTextPosition(JButton.CENTER);
+        away4.setForeground(Color.white);
+        away5.setHorizontalTextPosition(JButton.CENTER);
+        away5.setVerticalTextPosition(JButton.CENTER);
+        away5.setForeground(Color.white);
+        homeScore.setHorizontalTextPosition(JButton.CENTER);
+        homeScore.setVerticalTextPosition(JButton.CENTER);
+        homeScore.setForeground(Color.white);
+        awayScore.setHorizontalTextPosition(JButton.CENTER);
+        awayScore.setVerticalTextPosition(JButton.CENTER);
+        awayScore.setForeground(Color.white);
+        
+        buttonSuit.setHorizontalTextPosition(JButton.CENTER);
+        buttonSuit.setVerticalTextPosition(JButton.CENTER);
+        buttonSuit.setForeground(Color.white);
+        
+        buttonRestart.setHorizontalTextPosition(JButton.CENTER);
+        buttonRestart.setVerticalTextPosition(JButton.CENTER);
+        buttonRestart.setForeground(Color.white);
+        
+        nextPlayer.setHorizontalTextPosition(JButton.CENTER);
+        nextPlayer.setVerticalTextPosition(JButton.CENTER);
+        nextPlayer.setForeground(Color.white);
         
     }//GEN-LAST:event_formWindowOpened
 
@@ -1665,7 +1738,13 @@ public class Congklak extends javax.swing.JFrame {
     private javax.swing.JButton home4;
     private javax.swing.JButton home5;
     private javax.swing.JLabel homeScore;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JOptionPane jOptionPane1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton nextPlayer;
     private javax.swing.JLabel textPlayer;
     // End of variables declaration//GEN-END:variables
